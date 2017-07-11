@@ -19,7 +19,7 @@ root: ~/
 # tmux_command: byobu
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-startup_window: vim
+startup_window: editor
 
 # Specitifes (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
 # startup_pane: 1
@@ -31,10 +31,10 @@ startup_window: vim
 # post: tmux -CC attach -t default
 
 windows:
-  - vim:
+  - editor:
     - cd ~/git
-    - vim
-  - term:
+    - $EDITOR
+  - many:
       layout: split
       panes:
         - 1:
@@ -51,14 +51,14 @@ windows:
         - 8:
         - 9:
   - one:
-  - vspl:
+  - two:
       layout: even-horizontal
       panes:
         - 1:
         - 2:
-  - ranger:
-    - ranger ~
-  - xen:
-    - until $(ssh root@xenserver); do sleep 2; done
+  - filemanager:
+    - $FILE_MANAGER ~
+  - xenconsole:
+    - until (ssh root@xenserver); do sleep 2; done
     - sleep 3
     - xsconsole
