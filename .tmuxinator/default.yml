@@ -28,34 +28,31 @@ startup_window: editor
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t default
+# post: tmux -C attach -t default
 
 windows:
   - editor:
-    - cd ~/git
     - $EDITOR
   - many:
       layout: split
       panes:
         - 1:
-          - cd ~/git
-          - clear
         - 2:
         - 3:
         - 4:
         - 5:
         - 6:
         - 7:
-          - ssh root@xenserver
-          - clear
         - 8:
         - 9:
-  - one:
+          - ssh root@xenserver
+          - clear
   - two:
       layout: even-horizontal
       panes:
         - 1:
         - 2:
+  - one:
   - filemanager:
     - $FILE_MANAGER ~
   - xenconsole:
