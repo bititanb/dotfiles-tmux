@@ -44,15 +44,17 @@ windows:
         - 6:
           - ssh root@xenserver
           - clear
-  - two:
-      layout: even-horizontal
+  - four:
+      layout: split
       panes:
         - 1:
         - 2:
+        - 3:
+        - 4:
   - one:
   - filemanager:
     - $FILE_MANAGER ~
-  - xenconsole:
-    - until (ssh root@xenserver); do sleep 2; done
-    - sleep 3
-    - xsconsole
+  # - xenconsole:
+  #   - until (ssh root@xenserver); do sleep 2; done
+  #   - sleep 3
+  #   - xsconsole
