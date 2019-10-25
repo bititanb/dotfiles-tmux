@@ -1,5 +1,4 @@
-# ~/.tmuxinator/default.yml
-
+---
 name: default
 root: ~/
 
@@ -7,7 +6,7 @@ root: ~/
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
-#pre: tmux set-option -gs set-titles-string 'tmuxinator - default'
+# pre: tmux set-option -gs set-titles-string 'tmuxinator - default'
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -54,7 +53,3 @@ windows:
   - one:
   - filemanager:
     - $FILE_MANAGER ~
-  # - xenconsole:
-  #   - until (ssh root@xenserver); do sleep 2; done
-  #   - sleep 3
-  #   - xsconsole
