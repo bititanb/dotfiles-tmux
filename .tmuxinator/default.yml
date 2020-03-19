@@ -18,7 +18,7 @@ root: ~/
 # tmux_command: byobu
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-startup_window: editor
+startup_window: 1
 
 # Specitifes (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
 # startup_pane: 1
@@ -30,26 +30,5 @@ startup_window: editor
 # post: tmux -C attach -t default
 
 windows:
-  - editor:
+  - 1:
     - $EDITOR
-  - many:
-      layout: split
-      panes:
-        - 1:
-        - 2:
-        - 3:
-        - 4:
-        - 5:
-        - 6:
-          - ssh root@xenserver
-          - clear
-  - four:
-      layout: split
-      panes:
-        - 1:
-        - 2:
-        - 3:
-        - 4:
-  - one:
-  - filemanager:
-    - $FILE_MANAGER ~
